@@ -1,0 +1,83 @@
+import type { Task } from '../types/task'
+import type { TeamMember } from '../types/team'
+
+export const teamMembers: TeamMember[] = [
+  { id: 'me', name: '나', initials: '나', role: '제품 리드', color: '#6d5ce7' },
+  { id: 'dev', name: '김개발', initials: '김', role: '프론트엔드', color: '#2f80ed' },
+  { id: 'pm', name: '이기획', initials: '이', role: '제품 기획', color: '#e28a35' },
+  { id: 'design', name: '박디자인', initials: '박', role: '프로덕트 디자인', color: '#de6284' },
+]
+
+export const sampleTasks: Task[] = [
+  {
+    id: 'task-1',
+    title: '결제 화면 추가',
+    type: '기능',
+    status: 'backlog',
+    assigneeId: 'dev',
+    priority: 'high',
+    dueDate: '9월 12일',
+    checklistCompleted: 2,
+    checklistTotal: 5,
+  },
+  {
+    id: 'task-2',
+    title: '검색 API 응답 속도 개선',
+    type: '개선',
+    status: 'backlog',
+    assigneeId: 'me',
+    priority: 'normal',
+    dueDate: '오늘',
+  },
+  {
+    id: 'task-3',
+    title: '모바일 레이아웃 확인',
+    type: '개선',
+    status: 'planned',
+    assigneeId: 'design',
+    priority: 'normal',
+    dueDate: '9월 10일',
+    isBlocked: true,
+    blockedReason: 'QA 환경 데이터가 준비되지 않았습니다.',
+  },
+  {
+    id: 'task-4',
+    title: '로그인 세션 갱신',
+    type: '기능',
+    status: 'in_progress',
+    assigneeId: 'dev',
+    priority: 'urgent',
+    dueDate: '9월 10일',
+    checklistCompleted: 2,
+    checklistTotal: 5,
+  },
+  {
+    id: 'task-5',
+    title: '온보딩 문구 검토',
+    type: '콘텐츠',
+    status: 'in_progress',
+    assigneeId: 'pm',
+    priority: 'low',
+    dueDate: '9월 13일',
+  },
+  {
+    id: 'task-6',
+    title: '프로필 편집 QA',
+    type: '기능',
+    status: 'qa',
+    assigneeId: 'design',
+    priority: 'high',
+    dueDate: '오늘',
+    checklistCompleted: 4,
+    checklistTotal: 4,
+  },
+  {
+    id: 'task-7',
+    title: '팀 초대 화면 설계',
+    type: '기능',
+    status: 'done',
+    assigneeId: 'design',
+    priority: 'normal',
+    dueDate: '9월 6일',
+  },
+]
